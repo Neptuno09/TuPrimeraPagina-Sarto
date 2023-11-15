@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block form %}
+    <center>
+        <h1>Profesores</h1>
+        {%block registroprofe%}
+
+        {%endblock%}
+        {%block buscarprof%}
+            {% block resultados %}
+
+            {%endblock%}
+        {%endblock%}
+        <br>
+        <button onclick="window.location.href='{% url "inicio"%}'">Volver a la pagina de inicio</button>
+        {%block boton%}
+            <h2>o</h2>
+            <button onclick="window.location.href='buscarprof'">Busca un profesor</button>
+        {%endblock%}
+        
+    </center>
+{% endblock %}

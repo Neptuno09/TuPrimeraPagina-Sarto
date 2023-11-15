@@ -1,0 +1,16 @@
+{%extends "profesorform.html"%}
+{%block boton%}
+{%endblock%}
+{%block buscarprof%}
+    <h2>Buscar un Profesor</h2>
+    <form action='buscarprof' method="POST" >{% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>    
+        <br>
+        <input type="submit", value="Buscar">
+    </form>
+    {% if mensaje_error %}
+        <p>{{ mensaje_error }}</p>
+    {% endif %}
+{%endblock%}

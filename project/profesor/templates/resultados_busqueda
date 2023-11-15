@@ -1,0 +1,16 @@
+{% extends "profesorform.html" %}
+
+{% block resultados %}
+    {% if profesor %}
+        <h2>Resultados de la búsqueda</h2>
+        <h2>Nombre:</h2>
+        <h2>{{ profesor.nombre }}</h2>
+        <p>Apellido: {{ profesor.apellido }}</p>
+        <p>Edad: {{ profesor.edad }}</p>
+        <p>Email: {{ profesor.email }}</p>
+    {% endif %}
+{% endblock %}
+{%block boton%}
+            <h2>o</h2>
+            <button onclick="window.location.href='buscarprof'">Busca otro profesor</button>
+        {%endblock%}

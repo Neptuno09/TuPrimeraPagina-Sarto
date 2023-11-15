@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block form %}
+    <center>
+        <h1>Estudiantes</h1>
+        <h2>Registrar un nuevo estudiante</h2>
+        <form action="registro-estudiante" method="POST">{% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <br>
+            <input type="submit", value="Enviar">
+        </form>
+    </center>
+    <br>
+    <button onclick="window.location.href='{% url "inicio"%}'">Volver a la pagina de inicio</button>
+{% endblock %}

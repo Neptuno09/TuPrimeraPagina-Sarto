@@ -12,3 +12,4 @@ Administración es un atajo para ir a /admin.
 --SUPERUSER--
 Usuario: superuser
 contraseña: superuserpsw
+
